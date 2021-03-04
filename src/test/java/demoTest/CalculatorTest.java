@@ -1,8 +1,7 @@
 package demoTest;
 
-import static org.junit.Assert.*;
-
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -18,12 +17,21 @@ public class CalculatorTest extends Calculator {
 
 	@Test
 	public void testAdd() {
-		fail("Not yet implemented"); // TODO
+		int a = 2;
+		int b = 3;
+		Calculator calc = new Calculator();
+		int actual = calc.add(a, b);
+
+		Assert.assertEquals("Addition fail", 5, actual);
 	}
 
 	@Test
 	public void testSub() {
-		fail("Not yet implemented"); // TODO
-	}
+		int a = 4;
+		int b = 3;
+		Calculator calc = new Calculator();
+		int actual = calc.sub(a, b);
 
+		Assert.assertEquals("Substraction fail", 1, actual);
+	}
 }
